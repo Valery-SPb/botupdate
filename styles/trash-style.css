@@ -59,12 +59,13 @@ body {
 	margin-top: 1vh;
 	display: block;
 	text-align: center;
-	font-size: 2em;
-	color:rgb(126, 126, 126);
-	font-family: airstream;
+	font-size: 1.5em;
+	color:rgb(0, 0, 0);
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	background-color: rgb(144, 144, 144);
 	position: absolute;
-	left: 33px;
-	bottom: 9px;
+	left: 40px;
+	bottom: 3px;
 }
 .thumbnails-list {
 	list-style: none;
