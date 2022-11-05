@@ -45,6 +45,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	position: relative;
+	transition: 1s cubic-bezier(0.1, 1.8, 0.9, 1);
 }
 .details-btn {
 	display: block;
@@ -128,6 +129,10 @@ body {
 }
 .thumbnails-item:hover {
 	transform: scale(1.1);
+}
+.is_point {
+	transform: scale(0.001);
+	transition: 0s;
 }
 
 @media (min-width: 560px) {
