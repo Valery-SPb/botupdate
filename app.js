@@ -1,45 +1,22 @@
-// HW12 - ConversionsAnyBase
-let number = -11483;
-let base = 2;
-let inString = "10110011011011"
 
-console.log("begin");
-//console.log(fromNumberToString(number, base));
-console.log(fromStringToNumber(inString, base));
+let teudatStrNumber ="123456782";
+console.log(checkTeudatZehut(teudatStrNumber));
 
-function fromNumberToString(number, base) {
-	let strRes = "";
-	number = Math.abs(number);
-	do {
-		let digit = number % base;
-		let symbol = String.fromCharCode(asciiFromNuber(digit));
-		strRes= symbol + strRes;
-		number = Math.trunc(number/base);
-	} while (number !=0);
-	return strRes;
-}
-function asciiFromNuber(number) {
-	// 48-57 - 0-9 - 0-9
-	// 97-122 - a-z - 10-36
-	let ascNumber = 0;
-	if (-1 < number && number < 10) {
-		ascNumber = number + 48;
-	} else if (9 < number && number < base) {
-		ascNumber = number + 87;
-	} else { console.log("ошибка преобразования ASCII")}
-	return ascNumber;
-}
-
-function fromStringToNumber(string, base) {
-	let resNumber = 0;
-	for (let i = 0; i < string.length; i++) {
-		let asciiNumber =string.charCodeAt(i);
-		if (47 < asciiNumber && asciiNumber < 58) {
-			symNumber = asciiNumber - 48;
-		} else if (96 < asciiNumber && asciiNumber < 123) {
-			symNumber = asciiNumber - 87;
-		} else { console.log("ошибка преобразования ASCII")}
-		resNumber = resNumber * base + symNumber;
+function checkTeudatZehut(teudatStrNumber) {
+	let inStr = Array.from(teudatStrNumber);
+	if (inStr.length != 9) {
+		return "not 9 numbers"
 	}
-	return resNumber;
+	let resStr =inStr.map(function(symbol, index) {
+		return index % 2 == 0 ? +symbol : +oddSymbol(symbol);
+	});
+	let res = resStr.reduce(function(res, cur) {
+		return res + cur;
+	},0);
+	res = res % 10 == 0 ? "true" : "false";
+	return res;
+}
+
+function oddSymbol(symbol) {
+	return symbol * 2 < 10 ? symbol * 2 : 1 + (symbol * 2) % 10;
 }
