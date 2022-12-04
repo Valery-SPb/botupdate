@@ -1,0 +1,27 @@
+Add functionality
+1.1.
+Introduce HTML element with number of the remaining guess trials
+1.1.1.
+Initial number is 6
+1.1.2.
+Each guess trial decrements number of the remaining trials
+1.2.
+In the case a gamer guesses a word for 6 or less trials the green colored message
+appears like
+-
+Congratulations
+-
+you have guessed word
+1.3.
+In the case a gamer doesn’t guess a word for 6 trials the red colored message appear
+like
+–
+Sorry – your guess trials have ended up
+2.
+Bug in existing code
+2.1.
+There is a bug for words containing repeated letters like “pappy”
+2.2.
+Try to find and at least explain the bug’s root cause
+2.3.
+Try to figure out a solution for the bug fixing
