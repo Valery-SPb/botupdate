@@ -4,18 +4,18 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Worldle</title>
-	<link rel="stylesheet" href="styles/wordle.css">
+	<title>Marvels Field</title>
+	<link rel="stylesheet" href="styles/mar_fi.css">
 </head>
 <body>
-	<input type="text" onchange="onChange(event)">
-	<section class="word-guess">
-		<div class="letter-guess"></div>
-		<div class="letter-guess"></div>
-		<div class="letter-guess"></div>
-		<div class="letter-guess"></div>
-		<div class="letter-guess"></div>
+	<section class="question">
+		
 	</section>
-	<div name="annot" class="ant" data-text= "lets">Enter a five letter word</div>
-	<script src="src/wordle.js"></script>
+	<input type="text" class="input" onchange="onChange(event)">
+	<section class="answerWord">
+		
+	</section>
+	<div class="endGame"></div>
+	<button class="btn" id="Ngame" onclick="start_Game();">New Game</button>
+	<script src="src/mar_fi.js"></script>
 </body>
